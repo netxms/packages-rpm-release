@@ -9,9 +9,10 @@ Derived from [epel-release](https://git.rockylinux.org/staging/rpms/epel-release
 ## Building
 
 ```sh
-docker build -t netxms-release-builder docker
-docker run --cap-add=SYS_ADMIN -it --rm  -v $(pwd):/build -v $(pwd)/result:/result netxms-release-builder
+docker build -t netxms-rpm-builder docker
+docker run --cap-add=SYS_ADMIN -it --rm  -v $(pwd):/build -v $(pwd)/result:/result netxms-rpm-builder
+docker image rm netxms-rpm-builder
 
 # Cache dependencies between builds
-#docker run --cap-add=SYS_ADMIN -it --rm -v $(pwd)/cache:/var/cache/mock -v $(pwd):/build -v $(pwd)/result:/result netxms-release-builder
+#docker run --cap-add=SYS_ADMIN -it --rm -v $(pwd)/cache:/var/cache/mock -v $(pwd):/build -v $(pwd)/result:/result netxms-rpm-builder
 ```
