@@ -1,0 +1,7 @@
+[netxms]
+name=NetXMS Packages for Fedora Core $releasever - $basearch
+baseurl=https://packages.netxms.org/fedora/$releasever/$basearch/stable/
+enabled=1
+gpgcheck=1
+countme=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NETXMS
